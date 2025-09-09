@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sampreeta | Social Entrepreneur Portfolio</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent1:#06b6d4;
+      --accent2:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --muted: #9aa4b2;
+      --radius: 18px;
+      --gap: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.08), transparent),
+                  radial-gradient(900px 500px at 90% 90%, rgba(6,182,212,0.06), transparent),
+                  var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      padding:40px;
+    }
+    .stage{max-width:1100px;margin:0 auto;}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);padding:24px;margin:20px 0;box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      transform-style:preserve-3d;backdrop-filter: blur(6px);}
+    .hero{display:flex;justify-content:center;}
+    .hero-inner{width:100%;max-width:760px;text-align:center;padding:48px 36px;transition:transform 0.12s ease, box-shadow 0.12s ease;}
+    .profile-3d{perspective:1000px;margin:0 auto 10px;}
+    .avatar{width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:white;box-shadow:0 10px 30px rgba(124,58,237,0.22);transform:translateZ(40px)}
+    .name{font-size:28px;margin:12px 0 6px}
+    .meta{color:var(--muted);margin:0}
+    .email{color:var(--muted);font-size:14px}
+    .cta{margin-top:16px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:white;text-decoration:none;font-weight:600;margin:6px}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    .container{padding:20px}
+    .section-title{font-size:22px;margin-bottom:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--gap)}
+    .project{padding:18px}
+    .project .tag{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .project ul{margin:8px 0 0 18px;color:var(--muted)}
+    .achievements{list-style:disc;margin-left:18px;color:var(--muted)}
+    .contact form{display:grid;gap:12px}
+    .contact input,.contact textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .footer{text-align:center;color:var(--muted);font-size:13px;margin:24px 0}
+    .interactive{transition:transform 0.12s ease, box-shadow 0.12s ease;transform-style:preserve-3d}
+    .interactive:hover{box-shadow:0 20px 50px rgba(2,6,23,0.7)}
+    @media (max-width:600px){
+      body{padding:18px}
+      .hero-inner{padding:28px}
+      .avatar{width:90px;height:90px;font-size:24px}
+    }
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .hero-inner{animation:floaty 6s ease-in-out infinite}
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <div class="hero">
+      <div class="hero-inner card interactive">
+        <div class="profile-3d">
+          <div class="avatar" aria-hidden="true">SE</div>
+        </div>
+        <h1 class="name">Sampreeta</h1>
+        <p class="meta">AIML • KPRCAS</p>
+        <p class="email">sampreetashanmugam@gmail.com</p>
+        <div class="cta">
+          <a href="#projects" class="btn">Projects</a>
+          <a href="#contact" class="btn ghost">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="container card">
+      <h2>About</h2>
+      <p>
+        I'm a social entrepreneur and AI/ML student passionate about building technology-driven
+        solutions that create measurable social impact — especially in education, healthcare,
+        and rural development. I combine user-centered design with machine learning to
+        design scalable interventions.
+      </p>
+    </section>
+
+    <section id="projects" class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="grid">
+        <article class="project card interactive">
+          <h3>Smart Tutoring for Rural Classrooms</h3>
+          <p class="tag">AIML • EdTech</p>
+          <p>Adaptive quiz engine that personalizes practice for students using lightweight ML models and SMS-based push nudges. Improved average retention by 22% in pilot schools.</p>
+          <ul>
+            <li>Lightweight NLP for question matching</li>
+            <li>Model on-device with fallback server</li>
+            <li>Field deployment to 3 village schools</li>
+          </ul>
+        </article>
+
+        <article class="project card interactive">
+          <h3>CropCare: Early Pest Detection</h3>
+          <p class="tag">Computer Vision • Social Impact</p>
+          <p>A mobile-first model that helps smallholder farmers detect early signs of pest damage from phone photos and suggests low-cost treatment plans.</p>
+          <ul>
+            <li>Transfer learning on plant disease dataset</li>
+            <li>Offline-capable model and simple UI for low-literacy users</li>
+            <li>Partnered with local NGOs for training</li>
+          </ul>
+        </article>
+
+        <article class="project card interactive">
+          <h3>MediAssist: Teletriage Chatbot</h3>
+          <p class="tag">NLP • Healthcare</p>
+          <p>Symptom-checker chatbot built with a small footprint model that routes patients to nearest clinics and generates triage reports for community health workers.</p>
+          <ul>
+            <li>Privacy-first design</li>
+            <li>Reduced unnecessary clinic visits by 18%</li>
+            <li>Open-source dataset for local languages</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="achievements" class="container card">
+      <h2>Achievements</h2>
+      <ul class="achievements">
+        <li>Winner — University AI Hackathon (2024): Deployed an offline ML model for flood prediction</li>
+        <li>Best Social Impact Project — Tech4Good (2023): Smart Tutoring pilot scaled to 150 students</li>
+        <li>Research Poster accepted — Intl. Student Conference on AI (2024): "Low-resource CV for Agriculture"</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container card contact">
+      <h2>Contact</h2>
+      <p>I'm open to collaborations, internships, and speaking at events.</p>
+      <form id="contactForm">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Sampreeta — Built with ❤️ for social impact</p>
+    </footer>
+  </main>
+
+  <script>
+    // update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // tilt 3D effect
+    const cards = document.querySelectorAll('.interactive, .card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const midX = rect.width / 2;
+        const midY = rect.height / 2;
+        const rotateY = ((x - midX) / midX) * 8;
+        const rotateX = -((y - midY) / midY) * 8;
+        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(6px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.5s ease';
+        card.style.transform = 'none';
+      });
+    });
+
+    // simple contact form handler
+    const form = document.getElementById('contactForm');
+    if(form){
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const name = data.get('name');
+        const email = data.get('email');
+        alert(`Thanks, ${name}! Your message has been noted (email: ${email}).`);
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
